@@ -1,5 +1,3 @@
-(load (expand-file-name "defuns/file-defuns.el" user-emacs-directory))
-(load (expand-file-name "defuns/buffer-defuns.el" user-emacs-directory))
 
 (global-set-key (kbd "C-x C-m")		'smex)
 
