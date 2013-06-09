@@ -59,6 +59,7 @@
    (cons 'shell-command melpa)
    (cons 'slime-js marmalade)
    (cons 'smex melpa)
+   (cons 'undo-tree melpa)
    (cons 'yasnippet marmalade)
    (cons 'yasnippet-bundle marmalade)
    ))
