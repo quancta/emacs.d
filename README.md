@@ -1,4 +1,4 @@
 emacs.d
 =======
 
-My Emacs configuration
+My Emacs configuration - mostly a fork of Emacs Rocks.
