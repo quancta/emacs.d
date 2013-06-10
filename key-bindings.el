@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-c e")		'speedbar)
 (global-set-key (kbd "C-c I")		'find-user-init-file)
 (global-set-key (kbd "C-c k")		'find-key-bindings-file)
+(global-set-key (kbd "C-c m")		'magit-status)
 (global-set-key (kbd "C-c s")		'switch-to-scratch-buffer)
 
 ;; Jump to a definition in the current file. (This is awesome)
