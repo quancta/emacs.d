@@ -13,7 +13,7 @@
 (setq initial-frame-alist
       `((font . "Monaco-17")
         (width . 96)
-        (height . 56)))
+        (height . 40)))
 
 (setq default-frame-alist
       (copy-alist initial-frame-alist))
