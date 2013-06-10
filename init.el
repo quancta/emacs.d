@@ -64,6 +64,7 @@
 ;(require 'setup-viper-mode)
 (require 'setup-evil-mode)
 (require 'setup-pabbrev)
+(require 'setup-scheme-mode)
 
 (when is-mac (require 'mac))
 
