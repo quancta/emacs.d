@@ -11,7 +11,7 @@
 (setq mac-right-control-modifier 'super)
 
 (setq initial-frame-alist
-      `((font . "Monaco-17")
+      `((font . "Monaco-16")
         (width . 96)
         (height . 40)))
 
