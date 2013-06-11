@@ -37,7 +37,6 @@
    (cons 'dash melpa)
    (cons 'dired-details melpa)
    (cons 'elisp-slime-nav melpa)
-   (cons 'evil marmalade)
    (cons 'evil-leader marmalade)
    (cons 'evil-nerd-commenter marmalade)
    (cons 'evil-numbers marmalade)
