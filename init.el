@@ -66,6 +66,8 @@
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
 
+(require 'sane-defaults)
+
 (when is-mac (require 'mac))
 
 ;; Map file type to modes
