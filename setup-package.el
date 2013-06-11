@@ -58,6 +58,7 @@
    (cons 'quack melpa)
    (cons 'shell-command melpa)
    (cons 'slime-js marmalade)
+   (cons 'smooth-scrolling melpa)
    (cons 'smex melpa)
    (cons 'undo-tree melpa)
    (cons 'yasnippet marmalade)
