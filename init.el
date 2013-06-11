@@ -68,6 +68,9 @@
 
 (when is-mac (require 'mac))
 
+;; Map file type to modes
+(require 'mode-mappings)
+
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
 (dolist (file (directory-files defuns-dir t "\\w+"))
