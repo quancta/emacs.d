@@ -1,0 +1,3 @@
+[submodule "site-lisp/vimpulse"]
+	path = site-lisp/vimpulse
+	url = git://gitorious.org/vimpulse/vimpulse.git
