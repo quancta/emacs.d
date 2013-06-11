@@ -4,7 +4,7 @@
   (eval-buffer))
 
 ;; indent code after pattern match ->
-(setq tuareg-use-smie t)
+;; (setq tuareg-use-smie t)
 
 ;; Make sure you do the following in site-lisp/typerex directory:
 ;; configure -prefix /usr/local
