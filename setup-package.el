@@ -31,12 +31,15 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
+   (cons 'async melpa)
+   (cons 'better-defaults melpa)
    (cons 'clj-mode marmalade)
    (cons 'clj-refactor marmalade)
    (cons 'clojure-mode melpa)
    (cons 'dash melpa)
    (cons 'dired-details melpa)
    (cons 'elisp-slime-nav melpa)
+   (cons 'emacs-eclim melpa)
    (cons 'evil-leader marmalade)
    (cons 'evil-nerd-commenter marmalade)
    (cons 'evil-numbers marmalade)
@@ -61,6 +64,7 @@
    (cons 'smex melpa)
    (cons 'yasnippet marmalade)
    (cons 'yasnippet-bundle marmalade)
+   (cons 'zencoding-mode marmalade)
    ))
 
 (condition-case nil
