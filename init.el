@@ -29,12 +29,6 @@
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 
-;; Functions (load all files in defuns-dir)
-(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
-(dolist (file (directory-files defuns-dir t "\\w+"))
-  (when (file-regular-p file)
-    (load file)))
-
 ;; Setup packages
 (require 'setup-package)
 
@@ -67,8 +61,8 @@
 (require 'setup-ffip)
 (require 'setup-paredit)
 (require 'setup-eldoc)
-;(require 'setup-viper-mode)
-(require 'setup-evil-mode)
+(require 'setup-viper-mode)
+;(require 'setup-evil-mode)
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
 
@@ -85,6 +79,12 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+;; Functions (load all files in defuns-dir)
+(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
+(dolist (file (directory-files defuns-dir t "\\w+"))
+  (when (file-regular-p file)
+    (load file)))
 
 ;; Keep emacs Custom-settings in separate file
 (setq my-custom-file (expand-file-name "custom.el" user-emacs-directory))
