@@ -60,10 +60,13 @@
    (cons 'paredit melpa)
    (cons 'shell-command melpa)
    (cons 'slime-js marmalade)
+   (cons 's melpa)
+   (cons 's-buffer melpa)
    (cons 'smooth-scrolling melpa)
    (cons 'smex melpa)
    (cons 'yasnippet marmalade)
    (cons 'yasnippet-bundle marmalade)
+   (cons 'zen-mode marmalade)
    (cons 'zencoding-mode marmalade)
    ))
 
