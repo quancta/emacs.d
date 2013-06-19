@@ -61,8 +61,8 @@
 (require 'setup-ffip)
 (require 'setup-paredit)
 (require 'setup-eldoc)
-;(require 'setup-viper-mode)
-(require 'setup-evil-mode)
+(require 'setup-viper-mode)
+;(require 'setup-evil-mode)
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
 
