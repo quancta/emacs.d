@@ -73,18 +73,18 @@
 ;; Map file type to modes
 (require 'mode-mappings)
 
-;; Functions (load all files in defuns-dir)
-(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
-(dolist (file (directory-files defuns-dir t "\\w+"))
-  (when (file-regular-p file)
-    (load file)))
-
 (require 'key-bindings)
 
 ;; Emacs server
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+;; Functions (load all files in defuns-dir)
+(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
+(dolist (file (directory-files defuns-dir t "\\w+"))
+  (when (file-regular-p file)
+    (load file)))
 
 ;; Keep emacs Custom-settings in separate file
 (setq my-custom-file (expand-file-name "custom.el" user-emacs-directory))

@@ -7,3 +7,9 @@
 [submodule "site-lisp/utop"]
 	path = site-lisp/utop
 	url = https://github.com/diml/utop.git
+[submodule "site-lisp/undo-tree"]
+	path = site-lisp/undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule "site-lisp/deft"]
+	path = site-lisp/deft
+	url = git://jblevins.org/git/deft.git
