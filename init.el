@@ -65,6 +65,7 @@
 (require 'setup-evil-mode)
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
+(require 'setup-haskell-mode)
 
 (require 'sane-defaults)
 

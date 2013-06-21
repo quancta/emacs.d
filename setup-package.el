@@ -51,6 +51,7 @@
    (cons 'git-commit-mode melpa)
    (cons 'gitconfig-mode melpa)
    (cons 'gitignore-mode melpa)
+   (cons 'haskell-mode marmalade)
    (cons 'htmlize melpa)
    (cons 'ido-ubiquitous marmalade)
    (cons 'magit melpa)
