@@ -17,6 +17,9 @@
 (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
 (add-hook 'typerex-mode-hook 'utop-setup-ocaml-buffer)
 
+(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.01.0dev+trunk/bin/ocaml"))
+(setq tuareg-library-path (expand-file-name "~/.opam/4.01.0dev+trunk/lib/ocaml"))
+
 (add-hook
  'tuareg-mode-hook
  '(lambda ()
@@ -26,11 +29,11 @@
     (setq tuareg-electric-indent nil)
     (setq tuareg-leading-star-in-doc t)
     (setq tuareg-with-indent 0)
+
     ;; Do not display the REPL buffer, I usually set it up in another
     ;; window, or frame already, so just don't mess the layout with
     ;; another window.
     (setq tuareg-display-buffer-on-eval nil)
-    (setq tuareg-library-path (expand-file-name "~/.opam/4.00.1/lib/ocaml"))
 
     ;; ocamlspot and other keys
     (local-set-key (kbd "C-c ;")   'ocamlspot-query)
