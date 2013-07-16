@@ -59,6 +59,7 @@
    (cons 'move-text melpa)
    (cons 'nrepl melpa)
    (cons 'paredit melpa)
+   (cons 'rust-mode melpa)
    (cons 'shell-command melpa)
    (cons 'slime-js marmalade)
    (cons 's melpa)
