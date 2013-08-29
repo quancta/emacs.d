@@ -19,4 +19,10 @@
 (global-set-key (kbd "C-c C-q")		'toggle-text-mode-fill)
 
 
+;; Auto-fill
+;; M-q  'fill-paragraph
+(global-set-key (kbd "C-c q")		'auto-fill-mode)
+(global-set-key (kbd "C-c C-q")		'toggle-text-mode-auto-fill)
+
+
 (provide 'key-bindings)

@@ -65,11 +65,12 @@
 (require 'setup-ffip)
 (require 'setup-paredit)
 (require 'setup-eldoc)
-(require 'setup-viper-mode)
-;(require 'setup-evil-mode)
+;(require 'setup-viper-mode)
+(require 'setup-evil-mode)
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
 (require 'setup-pari-mode)
+(require 'setup-haskell-mode)
 
 (require 'sane-defaults)
 
@@ -99,7 +100,6 @@
 ;; Set default mode to be tuareg-mode.
 (when (locate-library "tuareg-mode")
   (setq initial-major-mode 'tuareg-mode))
-
 
 (require 'epa-file)
 (epa-file-enable)

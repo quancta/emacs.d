@@ -4,6 +4,9 @@
 [submodule "site-lisp/evil"]
 	path = site-lisp/evil
 	url = git://gitorious.org/evil/evil.git
+[submodule "site-lisp/utop"]
+	path = site-lisp/utop
+	url = https://github.com/diml/utop.git
 [submodule "site-lisp/undo-tree"]
 	path = site-lisp/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
