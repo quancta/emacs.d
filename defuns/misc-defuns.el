@@ -121,3 +121,15 @@ Both PATTERN and CONTENTS are matched as regular expressions."
   (interactive)
   (kmacro-push-ring)
   (edit-kbd-macro 'view-lossage))
+
+(defun insert-date-time ()
+  "Insert string for the current time formatted like '2:34 PM'."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%D %-I:%M %p")))
+
+(defun insert-date ()
+  "Insert string for today's date nicely formatted in American style,
+e.g. Sunday, September 17, 2000."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%A, %B %e, %Y")))
+
