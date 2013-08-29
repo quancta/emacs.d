@@ -11,4 +11,9 @@
 ;; make
 ;; sudo make install
 
+(setq tuareg-leading-star-in-doc t)
+(setq tuareg-display-buffer-on-eval nil)
+(setq tuareg-library-path (expand-file-name "~/.opam/4.01.0dev+trunk/lib/ocaml"))
+(setq tuareg-interactive-program (expand-file-name "~/.opam/4.01.0dev+trunk/bin/ocaml"))
+
 (provide 'setup-typerex)
