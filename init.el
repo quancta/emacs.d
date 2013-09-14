@@ -61,11 +61,11 @@
 (require 'setup-ffip)
 (require 'setup-paredit)
 (require 'setup-eldoc)
-;(require 'setup-viper-mode)
 (require 'setup-evil-mode)
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
 (require 'setup-haskell-mode)
+(require 'setup-ess)
 
 (require 'sane-defaults)
 
