@@ -13,7 +13,7 @@
 (setq initial-frame-alist
       `((font . "Monaco-17")
         (width . 96)
-        (height . 40)))
+        (height . 35)))
 
 (setq default-frame-alist
       (copy-alist initial-frame-alist))
@@ -39,5 +39,6 @@
 
 ;; Use aspell for spell checking: brew install aspell --lang=en
 (setq ispell-program-name "/opt/local/bin/aspell")
+
 
 (provide 'mac)

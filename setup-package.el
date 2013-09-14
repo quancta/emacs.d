@@ -37,6 +37,7 @@
    (cons 'clj-refactor marmalade)
    (cons 'clojure-mode melpa)
    (cons 'dash melpa)
+   (cons 'dash-at-point melpa)
    (cons 'dired-details melpa)
    (cons 'elisp-slime-nav melpa)
    (cons 'emacs-eclim melpa)

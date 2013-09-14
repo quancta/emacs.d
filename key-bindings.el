@@ -3,6 +3,7 @@
 
 ;; File Explorer - toggle speedbar
 (global-set-key (kbd "C-c e")		'speedbar)
+(global-set-key (kbd "C-c d")		'insert-date-time)
 (global-set-key (kbd "C-c I")		'find-user-init-file)
 (global-set-key (kbd "C-c k")		'find-key-bindings-file)
 (global-set-key (kbd "C-c m")		'magit-status)
@@ -11,7 +12,8 @@
 ;; Jump to a definition in the current file. (This is awesome)
 (global-set-key (kbd "C-c C-i")		'ido-imenu)
 (global-set-key (kbd "C-c C-r")		'copy-region-as-kill)
- 
+(global-set-key (kbd "C-c C-j")		'eval-print-last-sexp)
+
 ;; Auto-fill
 (global-set-key (kbd "C-c q")		'auto-fill-mode)
 (global-set-key (kbd "C-c C-q")		'toggle-text-mode-fill)

@@ -7,6 +7,8 @@
 
 ;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
+(setq inhibit-splash-screen t)
+(setq initial-scratch-message nil)
 
 ;; Set path to dependencies
 (setq site-lisp-dir
@@ -40,6 +42,7 @@
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
 
+
 ;; Setup extensions
 (eval-after-load 'ido   '(require 'setup-ido))
 (eval-after-load 'org   '(require 'setup-org))
@@ -56,6 +59,7 @@
 (eval-after-load 'java-mode       '(require 'setup-java-mode))
 (eval-after-load 'js2-mode        '(require 'setup-js2-mode))
 
+(require 'setup-ido)
 (require 'setup-typerex)
 (require 'setup-yasnippet)
 (require 'setup-ffip)
@@ -64,6 +68,7 @@
 (require 'setup-evil-mode)
 (require 'setup-pabbrev)
 (require 'setup-scheme-mode)
+(require 'setup-pari-mode)
 (require 'setup-haskell-mode)
 (require 'setup-ess)
 
@@ -90,3 +95,12 @@
 ;; Keep emacs Custom-settings in separate file
 (setq my-custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load my-custom-file)
+
+
+;; Set default mode to be tuareg-mode.
+(when (locate-library "tuareg-mode")
+  (setq initial-major-mode 'tuareg-mode))
+
+(require 'epa-file)
+(epa-file-enable)
+

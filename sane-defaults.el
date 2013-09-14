@@ -113,4 +113,6 @@
     (dotimes (i 10)
       (when (= p (point)) ad-do-it))))
 
+(setq initial-scratch-message nil)
+
 (provide 'sane-defaults)
