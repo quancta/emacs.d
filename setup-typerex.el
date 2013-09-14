@@ -1,3 +1,9 @@
+;; If you ever had problem with setting typerex for any reason
+;; this is the fallback to tuareg-mode
+;; svn checkout svn://svn.forge.ocamlcore.org/svn/tuareg/trunk $HOME/.tuareg 
+;; and then load it:
+;; (load (expand-file-name "~/.tuareg/tuareg-site-file.el"))
+
 (with-temp-buffer
   (insert
    (shell-command-to-string "ocp-edit-mode emacs -load-global-config"))
@@ -17,8 +23,8 @@
 (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
 (add-hook 'typerex-mode-hook 'utop-setup-ocaml-buffer)
 
-(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.01.0dev+trunk/bin/ocaml"))
-(setq tuareg-library-path (expand-file-name "~/.opam/4.01.0dev+trunk/lib/ocaml"))
+(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.00.1/bin/ocaml"))
+(setq tuareg-library-path (expand-file-name "~/.opam/4.00.1/lib/ocaml"))
 
 (add-hook
  'tuareg-mode-hook
