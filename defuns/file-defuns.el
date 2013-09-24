@@ -77,4 +77,12 @@
   (interactive)
   (find-file (expand-file-name "key-bindings.el" user-emacs-directory)))
 
+(defun save-active-region (filename)
+  "Edit the active region in a separate file."
+  (interactive "FCopy to file: ")
+  (save-restriction
+    (widen)
+    (write-region (point-min) (point-max) filename nil nil nil 'confirm))
+  (find-file filename))
+
 (provide 'file-defuns)

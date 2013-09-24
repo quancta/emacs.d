@@ -17,8 +17,8 @@
 (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
 (add-hook 'typerex-mode-hook 'utop-setup-ocaml-buffer)
 
-(setq tuareg-interactive-program  (expand-file-name "~/.opam/system/bin/ocaml"))
-(setq tuareg-library-path (expand-file-name "~/.opam/system/lib/ocaml"))
+(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.00.1/bin/ocaml"))
+(setq tuareg-library-path (expand-file-name "~/.opam/4.00.1/lib/ocaml"))
 
 (add-hook
  'tuareg-mode-hook
