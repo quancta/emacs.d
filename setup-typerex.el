@@ -1,3 +1,9 @@
+;; If you ever had problem with setting typerex for any reason
+;; this is the fallback to tuareg-mode
+;; svn checkout svn://svn.forge.ocamlcore.org/svn/tuareg/trunk $HOME/.tuareg 
+;; and then load it:
+;; (load (expand-file-name "~/.tuareg/tuareg-site-file.el"))
+
 (with-temp-buffer
   (insert
    (shell-command-to-string "ocp-edit-mode emacs -load-global-config"))
