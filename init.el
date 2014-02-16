@@ -72,6 +72,9 @@
 (require 'setup-haskell-mode)
 (require 'setup-ess)
 
+;; Setup Chinese language environment
+(require 'setup-language-chinese)
+
 (require 'sane-defaults)
 
 (when is-mac (require 'mac))
