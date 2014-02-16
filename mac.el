@@ -11,9 +11,11 @@
 (setq mac-right-control-modifier 'super)
 
 (setq initial-frame-alist
-      `((font . "Monaco-17")
-        (width . 96)
-        (height . 35)))
+      `(
+        (font . "Monaco-24")
+        (width . 76)
+        (height . 26)
+        ))
 
 (setq default-frame-alist
       (copy-alist initial-frame-alist))
