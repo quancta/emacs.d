@@ -23,8 +23,8 @@
 (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
 (add-hook 'typerex-mode-hook 'utop-setup-ocaml-buffer)
 
-(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.00.1/bin/ocaml"))
-(setq tuareg-library-path (expand-file-name "~/.opam/4.00.1/lib/ocaml"))
+(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.01.0/bin/ocaml"))
+(setq tuareg-library-path (expand-file-name "~/.opam/4.01.0/lib/ocaml"))
 
 (add-hook
  'tuareg-mode-hook
@@ -35,6 +35,9 @@
     (setq tuareg-electric-indent nil)
     (setq tuareg-leading-star-in-doc t)
     (setq tuareg-with-indent 0)
+
+    ;; Do not move the cursor after eval a phrase
+    (setq tuareg-skip-after-eval-phrase nil)
 
     ;; Do not display the REPL buffer, I usually set it up in another
     ;; window, or frame already, so just don't mess the layout with

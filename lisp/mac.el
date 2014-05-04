@@ -10,15 +10,27 @@
 (setq ns-function-modifier 'hyper)
 (setq mac-right-control-modifier 'super)
 
-(setq initial-frame-alist
-      `(
-        (font . "Monaco-24")
+(setq chinese-frame-alist
+      `((font . "Kaiti_SC-28")
         (width . 76)
-        (height . 26)
+        (height . 18)
         ))
 
-(setq default-frame-alist
-      (copy-alist initial-frame-alist))
+(setq normal-frame-alist
+      `((font . "Monaco-18")
+        (width . 80)
+        (height . 30)
+        ))
+
+(setq default-frame-alist 
+      (copy-alist normal-frame-alist)
+      ;(copy-alist chinese-frame-alist)
+      )
+
+(setq initial-frame-alist
+      (copy-alist normal-frame-alist)
+      ;(copy-alist chinese-frame-alist)
+      )
 
 ;; make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
