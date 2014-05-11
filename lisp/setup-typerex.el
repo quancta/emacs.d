@@ -4,10 +4,26 @@
 ;; and then load it:
 ;; (load (expand-file-name "~/.tuareg/tuareg-site-file.el"))
 
-(with-temp-buffer
-  (insert
-   (shell-command-to-string "ocp-edit-mode emacs -load-global-config"))
+(add-to-list 'load-path (concat
+  (replace-regexp-in-string "\n$" ""
+    (shell-command-to-string "/Users/qta/local/opam/bin/opam config var share"))
+  "/emacs/site-lisp"))
+(require 'ocp-indent)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Warning: file "/Users/qta/.ocp/ocp-edit-mode.conf" does not exist.      ;;
+;; Creating with default values.                                           ;;
+;;                                                                         ;;
+;; (with-temp-buffer                                                       ;;
+;;   (insert                                                               ;;
+;;    (shell-command-to-string "ocp-edit-mode emacs -load-global-config")) ;;
+;;   (eval-buffer))                                                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(with-temp-buffer (insert (shell-command-to-string
+  "/Users/qta/.opam/system/bin/ocp-edit-mode emacs -load-global-config"))
   (eval-buffer))
+
 
 ;; indent code after pattern match ->
 ;; (setq tuareg-use-smie t)

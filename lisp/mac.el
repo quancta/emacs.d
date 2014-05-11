@@ -19,7 +19,7 @@
 (setq normal-frame-alist
       `((font . "Monaco-18")
         (width . 80)
-        (height . 30)
+        (height . 28)
         ))
 
 (setq default-frame-alist 
