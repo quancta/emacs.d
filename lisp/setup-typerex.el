@@ -6,7 +6,7 @@
 
 (add-to-list 'load-path (concat
   (replace-regexp-in-string "\n$" ""
-    (shell-command-to-string "/Users/qta/local/opam/bin/opam config var share"))
+    (shell-command-to-string "opam config var share"))
   "/emacs/site-lisp"))
 (require 'ocp-indent)
 
@@ -21,9 +21,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (with-temp-buffer (insert (shell-command-to-string
-  "/Users/qta/.opam/system/bin/ocp-edit-mode emacs -load-global-config"))
+  "ocp-edit-mode emacs -load-global-config"))
   (eval-buffer))
-
 
 ;; indent code after pattern match ->
 ;; (setq tuareg-use-smie t)
