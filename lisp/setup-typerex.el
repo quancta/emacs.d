@@ -4,9 +4,24 @@
 ;; and then load it:
 ;; (load (expand-file-name "~/.tuareg/tuareg-site-file.el"))
 
-(with-temp-buffer
-  (insert
-   (shell-command-to-string "ocp-edit-mode emacs -load-global-config"))
+(add-to-list 'load-path (concat
+  (replace-regexp-in-string "\n$" ""
+    (shell-command-to-string "opam config var share"))
+  "/emacs/site-lisp"))
+(require 'ocp-indent)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Warning: file "/Users/qta/.ocp/ocp-edit-mode.conf" does not exist.      ;;
+;; Creating with default values.                                           ;;
+;;                                                                         ;;
+;; (with-temp-buffer                                                       ;;
+;;   (insert                                                               ;;
+;;    (shell-command-to-string "ocp-edit-mode emacs -load-global-config")) ;;
+;;   (eval-buffer))                                                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(with-temp-buffer (insert (shell-command-to-string
+  "ocp-edit-mode emacs -load-global-config"))
   (eval-buffer))
 
 ;; indent code after pattern match ->
@@ -23,8 +38,8 @@
 (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
 (add-hook 'typerex-mode-hook 'utop-setup-ocaml-buffer)
 
-(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.00.1/bin/ocaml"))
-(setq tuareg-library-path (expand-file-name "~/.opam/4.00.1/lib/ocaml"))
+(setq tuareg-interactive-program  (expand-file-name "~/.opam/4.01.0/bin/ocaml"))
+(setq tuareg-library-path (expand-file-name "~/.opam/4.01.0/lib/ocaml"))
 
 (add-hook
  'tuareg-mode-hook
@@ -35,6 +50,9 @@
     (setq tuareg-electric-indent nil)
     (setq tuareg-leading-star-in-doc t)
     (setq tuareg-with-indent 0)
+
+    ;; Do not move the cursor after eval a phrase
+    (setq tuareg-skip-after-eval-phrase nil)
 
     ;; Do not display the REPL buffer, I usually set it up in another
     ;; window, or frame already, so just don't mess the layout with

@@ -15,7 +15,9 @@
       (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; Set up load path
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+; The new emacs doesn't like ~/.emacs.d/ on the load-path
+;(add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
 
 ;; Add external projects to load path

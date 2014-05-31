@@ -13,7 +13,13 @@
 (setq chinese-frame-alist
       '((font . "Kaiti_SC-36")
         (width . 76)
-        (height . 26)
+        (height . 18)
+        ))
+
+(setq normal-frame-alist
+      `((font . "Monaco-18")
+        (width . 80)
+        (height . 28)
         ))
 (setq initial-frame-alist
       `((font . "Monaco-24")
@@ -21,8 +27,15 @@
         (height . 36)
         ))
 
-(setq default-frame-alist
-      (copy-alist chinese-frame-alist))
+(setq default-frame-alist 
+      (copy-alist normal-frame-alist)
+      ;(copy-alist chinese-frame-alist)
+      )
+
+(setq initial-frame-alist
+      (copy-alist normal-frame-alist)
+      ;(copy-alist chinese-frame-alist)
+      )
 
 ;; make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
